@@ -196,6 +196,7 @@ def get_custom_css():
         border-radius: 14px !important;
 
         overflow-y: auto !important;
+
         overflow-x: hidden !important;
 
         max-height: 320px !important;
@@ -506,9 +507,9 @@ def get_custom_css():
 
         border-radius: 20px;
     }
-    
+
     /* =========================================================
-    Streamlit 상단 메뉴 배경 통일
+       Streamlit 상단 메뉴
     ========================================================= */
 
     header[data-testid="stHeader"] {
@@ -516,8 +517,8 @@ def get_custom_css():
         background:
             linear-gradient(
                 180deg,
-                #0f172a,
-                #111827
+                #261046,
+                #14071f
             ) !important;
     }
 
@@ -526,8 +527,8 @@ def get_custom_css():
         background:
             linear-gradient(
                 180deg,
-                #0f172a,
-                #111827
+                #261046,
+                #14071f
             ) !important;
     }
 
@@ -542,26 +543,49 @@ def get_custom_css():
     }
 
     /* =========================================================
-    Sidebar Collapse 버튼 (<< / >>)
+       Sidebar Toggle / 상단 아이콘
     ========================================================= */
 
     button[kind="header"] {
 
-        background: #ffffff !important;
-
-        color: #111827 !important;
-
-        border-radius: 10px !important;
+        background:
+            rgba(255,255,255,0.08) !important;
 
         border:
-            1px solid rgba(255,255,255,0.25) !important;
+            1px solid rgba(255,255,255,0.18) !important;
+
+        border-radius: 12px !important;
+
+        color: #ffffff !important;
+    }
+
+    button[kind="header"] svg {
+
+        fill: #ffffff !important;
+
+        color: #ffffff !important;
+
+        stroke: #ffffff !important;
     }
 
     button[kind="header"]:hover {
 
-        background: #c084fc !important;
+        background:
+            linear-gradient(
+                135deg,
+                #7c3aed,
+                #06b6d4
+            ) !important;
+    }
+
+    button[kind="header"]:hover svg {
+
+        fill: #ffffff !important;
 
         color: #ffffff !important;
+
+        stroke: #ffffff !important;
     }
+
     </style>
     """

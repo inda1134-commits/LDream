@@ -91,7 +91,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     birth_date = st.date_input(
-        "📅 출생년월일",
+        "📅 출생년월일(양력)",
         min_value=date(1920, 1, 1),
         max_value=date.today(),
         value=date(1990, 1, 1)
