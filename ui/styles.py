@@ -542,17 +542,26 @@ def get_custom_css():
     }
 
     /* =========================================================
-    Sidebar Collapse 버튼 (<<) 색상
+    Sidebar Collapse 버튼 (<< / >>)
     ========================================================= */
 
     button[kind="header"] {
 
-        color: #ffffff !important;
+        background: #ffffff !important;
+
+        color: #111827 !important;
+
+        border-radius: 10px !important;
+
+        border:
+            1px solid rgba(255,255,255,0.25) !important;
     }
 
     button[kind="header"]:hover {
 
-        color: #c084fc !important;
+        background: #c084fc !important;
+
+        color: #ffffff !important;
     }
     </style>
     """
