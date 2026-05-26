@@ -1,0 +1,206 @@
+2026-05-26 23:47:20,080 - INFO - 꿈 해몽 분석 시작
+2026-05-26 23:47:47,730 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-26 23:47:48,255 - INFO - 꿈 해몽 토큰 사용량: 1431
+2026-05-26 23:48:11,668 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-26 23:48:12,370 - INFO - PDF 리포트 저장 완료: outputs\reports\report_20260526_234812.pdf
+2026-05-26 23:48:43,091 - INFO - 꿈 해몽 분석 시작
+2026-05-26 23:49:01,907 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-26 23:49:01,913 - INFO - 꿈 해몽 토큰 사용량: 1203
+2026-05-26 23:49:32,946 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-26 23:49:33,718 - INFO - PDF 리포트 저장 완료: outputs\reports\report_20260526_234933.pdf
+2026-05-26 23:56:59,255 - INFO - 꿈 해몽 분석 시작
+2026-05-26 23:57:19,108 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-26 23:57:19,112 - INFO - 꿈 해몽 토큰 사용량: 1276
+2026-05-26 23:57:38,067 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-26 23:57:38,114 - ERROR - Can't open file "C:\Users\Suni\AppData\Local\Temp\tmpspeuu9kg.ttf"
+Traceback (most recent call last):
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\lib\utils.py", line 525, in open_for_read
+    return open_for_read_by_name(name,mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\lib\utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+           ^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Suni\\AppData\\Local\\Temp\\tmpspeuu9kg.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\lib\utils.py", line 532, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\lib\utils.py", line 478, in rlUrlRead
+    return urlopen(Request(name,headers=headers)).read()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\urllib\request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\urllib\request.py", line 541, in _open
+    return self._call_chain(self.handle_open, 'unknown',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\urllib\request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\urllib\request.py", line 1419, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: c>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 159, in TTFOpenFile
+    f = open_for_read(fn,'rb')
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "C:\Users\Suni\AppData\Local\Temp\tmpspeuu9kg.ttf"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Suni\workspace\Dream_L\app.py", line 285, in <module>
+    ReportService.generate_pdf(
+  File "C:\Users\Suni\workspace\Dream_L\services\report_service.py", line 407, in generate_pdf
+    pisa.CreatePDF(
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\xhtml2pdf\document.py", line 139, in pisaDocument
+    context = pisaStory(
+              ^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\xhtml2pdf\document.py", line 75, in pisaStory
+    pisaParser(src, context, default_css, xhtml, encoding, xml_output)
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\xhtml2pdf\parser.py", line 823, in pisaParser
+    context.parseCSS()
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\xhtml2pdf\context.py", line 690, in parseCSS
+    self.css = self.cssParser.parse(self.cssText)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\xhtml2pdf\w3c\cssParser.py", line 458, in parse
+    src, stylesheet = self._parseStylesheet(src)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\xhtml2pdf\w3c\cssParser.py", line 561, in _parseStylesheet
+    src, atResults = self._parseAtKeyword(src)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\xhtml2pdf\w3c\cssParser.py", line 685, in _parseAtKeyword
+    src, result = self._parseAtFontFace(src)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\xhtml2pdf\w3c\cssParser.py", line 866, in _parseAtFontFace
+    result = [self.cssBuilder.atFontFace(properties)]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\xhtml2pdf\context.py", line 221, in atFontFace
+    self.c.loadFont(names, src, bold=bold, italic=italic)
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\xhtml2pdf\context.py", line 1116, in loadFont
+    file = TTFont(fullFontName, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 1207, in __init__
+    self.face = TTFontFace(filename, validate=validate, subfontIndex=subfontIndex)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 1088, in __init__
+    TTFontFile.__init__(self, filename, validate=validate, subfontIndex=subfontIndex)
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 447, in __init__
+    TTFontParser.__init__(self, file, validate=validate,subfontIndex=subfontIndex)
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 183, in __init__
+    self.readFile(file)
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 259, in readFile
+    self.filename, f = TTFOpenFile(f)
+                       ^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 169, in TTFOpenFile
+    raise TTFError('Can\'t open file "%s"' % fn)
+reportlab.pdfbase.ttfonts.TTFError: Can't open file "C:\Users\Suni\AppData\Local\Temp\tmpspeuu9kg.ttf"
+2026-05-26 23:58:49,634 - INFO - 꿈 해몽 분석 시작
+2026-05-26 23:59:08,357 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-26 23:59:08,357 - INFO - 꿈 해몽 토큰 사용량: 1512
+2026-05-26 23:59:26,316 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-26 23:59:26,375 - ERROR - Can't open file "C:\Users\Suni\AppData\Local\Temp\tmpv04el9tc.ttf"
+Traceback (most recent call last):
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\lib\utils.py", line 525, in open_for_read
+    return open_for_read_by_name(name,mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\lib\utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+           ^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\Suni\\AppData\\Local\\Temp\\tmpv04el9tc.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\lib\utils.py", line 532, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\lib\utils.py", line 478, in rlUrlRead
+    return urlopen(Request(name,headers=headers)).read()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\urllib\request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\urllib\request.py", line 541, in _open
+    return self._call_chain(self.handle_open, 'unknown',
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\urllib\request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\urllib\request.py", line 1419, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: c>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 159, in TTFOpenFile
+    f = open_for_read(fn,'rb')
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "C:\Users\Suni\AppData\Local\Temp\tmpv04el9tc.ttf"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Suni\workspace\Dream_L\app.py", line 285, in <module>
+    ReportService.generate_pdf(
+  File "C:\Users\Suni\workspace\Dream_L\services\report_service.py", line 407, in generate_pdf
+    pisa.CreatePDF(
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\xhtml2pdf\document.py", line 139, in pisaDocument
+    context = pisaStory(
+              ^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\xhtml2pdf\document.py", line 75, in pisaStory
+    pisaParser(src, context, default_css, xhtml, encoding, xml_output)
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\xhtml2pdf\parser.py", line 823, in pisaParser
+    context.parseCSS()
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\xhtml2pdf\context.py", line 690, in parseCSS
+    self.css = self.cssParser.parse(self.cssText)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\xhtml2pdf\w3c\cssParser.py", line 458, in parse
+    src, stylesheet = self._parseStylesheet(src)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\xhtml2pdf\w3c\cssParser.py", line 561, in _parseStylesheet
+    src, atResults = self._parseAtKeyword(src)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\xhtml2pdf\w3c\cssParser.py", line 685, in _parseAtKeyword
+    src, result = self._parseAtFontFace(src)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\xhtml2pdf\w3c\cssParser.py", line 866, in _parseAtFontFace
+    result = [self.cssBuilder.atFontFace(properties)]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\xhtml2pdf\context.py", line 221, in atFontFace
+    self.c.loadFont(names, src, bold=bold, italic=italic)
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\xhtml2pdf\context.py", line 1116, in loadFont
+    file = TTFont(fullFontName, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 1207, in __init__
+    self.face = TTFontFace(filename, validate=validate, subfontIndex=subfontIndex)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 1088, in __init__
+    TTFontFile.__init__(self, filename, validate=validate, subfontIndex=subfontIndex)
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 447, in __init__
+    TTFontParser.__init__(self, file, validate=validate,subfontIndex=subfontIndex)
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 183, in __init__
+    self.readFile(file)
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 259, in readFile
+    self.filename, f = TTFOpenFile(f)
+                       ^^^^^^^^^^^^^^
+  File "c:\Users\Suni\workspace\Dream_L\.venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 169, in TTFOpenFile
+    raise TTFError('Can\'t open file "%s"' % fn)
+reportlab.pdfbase.ttfonts.TTFError: Can't open file "C:\Users\Suni\AppData\Local\Temp\tmpv04el9tc.ttf"

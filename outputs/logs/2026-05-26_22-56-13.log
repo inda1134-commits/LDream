@@ -1,0 +1,5 @@
+2026-05-26 23:18:21,103 - INFO - 꿈 해몽 분석 시작
+2026-05-26 23:18:40,272 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-26 23:18:41,068 - INFO - 꿈 해몽 토큰 사용량: 1230
+2026-05-26 23:18:55,864 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-26 23:18:55,919 - INFO - 리포트 저장 완료: outputs\reports\report_20260526_231855.json
