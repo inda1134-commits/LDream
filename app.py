@@ -78,9 +78,9 @@ st.markdown(
 )
 
 dream_text = st.text_area(
-    "🌙 꿈 내용을 입력하세요",
+    "🌙 해몽할 꿈 내용을 입력하세요",
     height=220,
-    placeholder="예: 이무기가 용이되어 하늘로 승천했어요...(없으면 '꿈이 없음')"
+    placeholder="예: 조상님이 꿈속에 나타났어요...(없으면 '꿈이 없음')"
 )
 
 st.markdown("---")
